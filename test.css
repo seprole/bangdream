@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap");
+
+body {
+  background-image: url(https://vignette.wikia.nocookie.net/bandori/images/c/c9/Bg.gif/revision/latest?cb=20200615062853);
+  background-color: #ffe5ed;
+  margin: 0;
+  font-family: "poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.top {
+  z-index: 100;
+  background: white;
+  opacity: 0.9;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 60px;
+}
+
+.top #topimg img {
+  width: 200px;
+}
+
+.menuItem {
+  z-index: 100;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: flex-end;
+}
+.menuItem li a {
+  color: #111;
+  margin: 0;
+}
+.menuItem li {
+  padding: 8px 20px;
+}
+.menuItem li:hover a {
+  color: orange;
+  font-weight: border;
+}
+.navbar-toggle {
+  position: absolute;
+  right: 32px;
+  display: none;
+}
+@media screen and (max-width: 760px) {
+  .top {
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    padding: 8px 12px;
+  }
+  .top #topimg img {
+    width: 150px;
+  }
+  .menuItem {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .menuItem li {
+    width: 100%;
+    padding: 0px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .active {
+    display: block;
+  }
+  #js-navbar-toggle img {
+    width: 50px;
+    cursor: pointer;
+  }
+}
